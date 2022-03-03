@@ -1,10 +1,15 @@
 import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
+
+import wave from "../images/wave.svg";
+import wave1 from "../images/wave1.svg";
+import section from "../images/section1.svg";
 
 export const Styles = createGlobalStyle`
 
     @font-face {
-        font-family: "Motiva Sans Light";
-        src: url("/fonts/Motiva-Sans-Light.ttf") format("truetype");
+        font-family: "Josefin Sans Light";
+        src: url("/fonts/JosefinSans-VariableFont_wght.ttf") format("truetype");
         font-style: normal;
     }
 
@@ -18,7 +23,7 @@ export const Styles = createGlobalStyle`
     body,
     html,
     a {
-        font-family: 'Motiva Sans Light', sans-serif;
+        font-family: 'Josefin Sans Light', sans-serif;
     }
 
 
@@ -27,12 +32,13 @@ export const Styles = createGlobalStyle`
         padding:0;
         border: 0;
         outline: 0;
-        background: #fff;
+        background: #faf0ca;
+        // Lemon Meringue
         overflow-x: hidden;
     }
 
     a:hover {
-        color: #18216d;
+        color: #fff;
     }
 
     input,
@@ -47,7 +53,7 @@ export const Styles = createGlobalStyle`
 
         :focus-within {
             background: none;
-            box-shadow: #2e186a 0px 0px 0px 1px;
+            box-shadow: #0D3B66 0px 0px 0px 1px;
         }
     }
 
@@ -57,8 +63,8 @@ export const Styles = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-family: 'Motiva Sans Bold', serif;
-        color: #18216d;
+        font-family: 'Josefin Sans Light', serif;
+        color: #0D3B66;
         font-size: 56px;
         line-height: 1.18;
 
@@ -72,7 +78,7 @@ export const Styles = createGlobalStyle`
     }
 
     p {
-        color: #18216d;
+        color: #0D3B66;
         font-size: 21px;        
         line-height: 1.41;
     }
@@ -84,10 +90,10 @@ export const Styles = createGlobalStyle`
     a {
         text-decoration: none;
         outline: none;
-        color: #2E186A;
+        color: #0D3B66;
 
         :hover {
-            color: #2e186a;
+            color: #;
         }
     }
     
@@ -109,4 +115,35 @@ export const Styles = createGlobalStyle`
     .ant-drawer-content-wrapper {
         width: 300px !important;
     }
+`;
+
+
+const Wave = styled.div`
+  position: absolute;
+  width: 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @media (max-width: 1440px) {
+    background-size: 1440px;
+  }
+`;
+
+export const Wave1 = styled(Wave)`
+  top: 2340px;
+  height: 446px;
+  background-image: url(${wave});
+`;
+
+export const Wave2 = styled(Wave)`
+  top: 2340px;
+  height: 446px;
+  background-image: url(${wave1});
+`;
+
+export const Section = styled(Wave)`
+  top: 1680px;
+  height: 446px;
+  background-image: url(${section});
 `;

@@ -35,7 +35,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
         <Col lg={12} md={12} sm={24} xs={24}>
           <Slide direction="right">
             <FormGroup autoComplete="off" onSubmit={handleSubmit}>
-              <Col span={24}>
+              {/* <Col span={24}>
                 <Input
                   type="text"
                   name="name"
@@ -44,7 +44,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   onChange={handleChange}
                 />
                 <ValidationType type="name" />
-              </Col>
+              </Col> */}
               <Col span={24}>
                 <Input
                   type="text"
@@ -55,7 +55,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 />
                 <ValidationType type="email" />
               </Col>
-              <Col span={24}>
+              {/* <Col span={24}>
                 <TextArea
                   placeholder="Your Message"
                   value={values.message || ""}
@@ -63,7 +63,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   onChange={handleChange}
                 />
                 <ValidationType type="message" />
-              </Col>
+              </Col> */}
               <ButtonContainer>
                 <Button name="submit">{t("Submit")}</Button>
               </ButtonContainer>

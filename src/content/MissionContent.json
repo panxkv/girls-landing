@@ -1,4 +1,16 @@
 {
-  "title": "Ready made sections",
-  "text": "Landy comes with a set of ready to use sections to help you easily create a landing page for your own brand, with all the content your startup desires. In order to replace any dummy elements (text, image, etc..) all you need to do is go to content folder and input your real content."
+  "title": "Mission",
+  "text": "Empowering Female Entrepreneurs (Think broad - Small Business Female Owners / Women Athletes [Collab with WNBA?] Women in Sports [Female Coaches, Managers, Team Owners etc] Upcoming Female Artists / Creators / Authors. Creating a strong presence of women in the investing world as well as cryptocurrency world, the metaverse and all its aspects, including the NFTs. **We are simply ready to step into the future together, holding hands of millions of wonderful women from all around the world!**",
+  "section": [
+    {
+      "title": "Let's run the world. Together",
+      "content": "We are simply ready to step into the future together, holding hands of millions of wonderful women from all around the world!",
+      "icon": "high-five.png"
+    },
+    {
+      "title": "It’s a Marathon, not a Sprint",
+      "content": "If you want to go fast, go alone. If you want to go far, go together.",
+      "icon": "run.png"
+    }
+  ]
 }

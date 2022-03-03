@@ -7,6 +7,7 @@ import { Button } from "../../common/Button";
 import {
   HeaderSection,
   LogoContainer,
+  LogoText,
   Burger,
   NotHidden,
   Menu,
@@ -14,6 +15,7 @@ import {
   Label,
   Outline,
   Span,
+
 } from "./styles";
 
 const Header = ({ t }: any) => {
@@ -27,31 +29,43 @@ const Header = ({ t }: any) => {
     setVisibility(!visible);
   };
 
+  const scrollUp = () => {
+    const element = document.getElementById("intro") as HTMLDivElement;
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
+  };
+
+
   const MenuItem = () => {
     const scrollTo = (id: string) => {
       const element = document.getElementById(id) as HTMLDivElement;
       element.scrollIntoView({
         behavior: "smooth",
+        block: "center"
+        // TODO: start if mobile
       });
       setVisibility(false);
     };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("About")}</Span>
-        </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
           <Span>{t("Mission")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <Span>{t("Product")}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo("collection")}>
+          <Span>{t("Collection")}</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo("contact")}>
+          <Span>{t("Contact")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
           style={{ width: "180px" }}
           onClick={() => scrollTo("contact")}
         >
           <Span>
-            <Button>{t("Contact")}</Button>
+            <Button>{t("Connect Wallet")} 🦊</Button>
           </Span>
         </CustomNavLinkSmall>
       </>
@@ -62,8 +76,8 @@ const Header = ({ t }: any) => {
     <HeaderSection>
       <Container>
         <Row justify="space-between">
-          <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="101px" height="64px" />
+          <LogoContainer onClick={scrollUp} to="/" aria-label="homepage">
+            <LogoText>GIRLS 🏃‍♀️ THE WORLD </LogoText>
           </LogoContainer>
           <NotHidden>
             <MenuItem />

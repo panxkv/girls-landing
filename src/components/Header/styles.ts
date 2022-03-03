@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import { MenuOutlined } from "@ant-design/icons";
 
 export const HeaderSection = styled("header")`
+  position: sticky;
+  top: 0;
+  background-color: #FAF0CA;
+  z-index: 999;
   padding: 1rem 0.5rem;
 
   .ant-row-space-between {
@@ -13,6 +17,15 @@ export const HeaderSection = styled("header")`
 
 export const LogoContainer = styled(Link)`
   display: flex;
+`;
+
+export const LogoText = styled("div")`
+  font-size: 20px;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #EE964B
+  }
 `;
 
 export const NavLink = styled("div")`
@@ -68,7 +81,7 @@ export const Menu = styled("h5")`
 
 export const CustomNavLinkSmall = styled(NavLink)`
   font-size: 1.2rem;
-  color: #18216d;
+  color: #0D3B66;
   transition: color 0.2s ease-in;
   margin: 0.5rem 2rem;
 

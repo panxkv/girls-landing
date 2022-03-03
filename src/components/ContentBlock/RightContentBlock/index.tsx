@@ -16,6 +16,8 @@ const RightBlock = ({
   content,
   button,
   icon,
+  icon_width,
+  icon_height,
   t,
   id,
 }: ContentBlockProps) => {
@@ -51,7 +53,9 @@ const RightBlock = ({
             </ContentWrapper>
           </Col>
           <Col lg={11} md={11} sm={12} xs={24}>
-            <SvgIcon src={icon} width="100%" height="100%" />
+            <video width={icon_width} height={icon_height} autoPlay muted loop>
+              <source src={icon}  type="video/mp4" />
+            </video>
           </Col>
         </Row>
       </Fade>
