@@ -19,8 +19,8 @@ const MiddleBlock = ({ id, title, content, button, t }: MiddleBlockProps) => {
     });
   };
   return (
-    <MiddleBlockSection>
-      <Row justify="center" align="middle" id={id} >
+    <MiddleBlockSection id={id}>
+      <Row justify="center" align="middle"  >
         <ContentWrapper>
           <Col lg={48} md={24} sm={24} xs={24}>
             <h6>{t(title)}</h6>

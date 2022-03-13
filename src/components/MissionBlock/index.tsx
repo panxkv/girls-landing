@@ -19,7 +19,7 @@ const MissionBlock = ({
   content,
   button,
   section,
-
+  second_content,
   icon,
   icon_width,
   icon_height,
@@ -33,13 +33,14 @@ const MissionBlock = ({
     });
   };
   return (
-    <MissionBlockContainer>
+    <MissionBlockContainer id={id}>
       <Fade direction="right">
-        <Row justify="space-between" align="middle" id={id}>
+        <Row justify="space-between" align="middle" >
           <Col>
-            <ContentWrapper>
+            <ContentWrapper >
               <h1>{t(title)}</h1>
               <Content>{t(content)}</Content>
+              { typeof second_content === "string" && <Content>{t(second_content)}</Content> }
               <ServiceWrapper>
                 <Row justify="space-between">
                   {typeof section === "object" &&

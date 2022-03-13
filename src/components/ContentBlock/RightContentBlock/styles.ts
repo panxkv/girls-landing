@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const RightBlockContainer = styled("section")`
+  scroll-margin-top: 10px;
+
   position: relative;
   padding: 10rem 0 8rem;
 

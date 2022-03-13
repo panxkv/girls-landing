@@ -1,14 +1,16 @@
 {
-    "title": "GIRLS 🏃‍♀️ THE WORLD",
-    "text": "Collection of 10k Empowering Women who run the NFT World!",
+    "title": "GIRLS RUN THE WORLD",
+    "text": "A community running together into the future and raising awareness about the presence of female entrepreneurs in Web3 through their unique #NFT art.",
     "button": [
       {
-        "title": "Join Discord"
+        "title": "Join Discord",
+        "href": "https://twitter.com/girlsrunthe_NFT"
       },
       {
         "title": "Twitter",
-        "color": "#fff"
-      }
+        "color": "#fff",
+        "href": "https://twitter.com/girlsrunthe_NFT"
+      } 
     ]
   }
   

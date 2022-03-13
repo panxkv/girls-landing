@@ -1,0 +1,62 @@
+{
+  "title": "Roadmap",
+  "text": "The GIRLS RUN THE WORLD Community will be in the holders' hands meaning you control where funds will go with full transparency. The community will decide what utilities they want most and when. Our roadmap will be updated according to the community's comments and ideas. 1 NFT = 1 Vote.",
+  "roadmapItems": [
+    {
+      "title": "EARLY ACCESS",
+      "content": "Access to premium resources, Discord chat, workshops.",
+      "more": "The early holders of our NFTs get exclusive access to all the premium resources in our secret Discord chat with the information that vary from educational content, NFT & crypto-themed workshops, discussions, interviews with successful entrepreneurs, and many more! We have so many different plans, projects, and collaborations in the works and those early NFT holders will be the first ones to know what’s coming up!",
+      "tags": ["10% SALES", "DISCORD"],
+      "phase": "0"
+    },
+    {
+      "title": "GIVEAWAYS",
+      "content": "Airdrops of 10 NFT for our holders and more...",
+      "more": "As we navigate the whole new world of projects and collaboration opportunities, our goal of uplifting our community remains the same! We’ll always strive to find the best deals, discounts, and coupon codes from different companies and creators that we’ll be working with in the future. We’ll be picking those brands that partnership with them will benefit us as a whole! Additionally, we’ll be giving away 10 NFTs to the members of our community that is already holding another NFT from our collection.",
+      "tags": ["20% SALES"],
+      "phase": "20"
+    },
+    {
+      "title": "MERCH",
+      "content": "Personalized T-shirts, planners, and more for NFT holders.",
+      "more": "At this stage of our roadmap, we’ll be sending out personalized merch to our NFT holders (T-shirts, planners, etc). We’re currently in talks with several clothing brands and companies that will bring our vision to life.",
+      "tags": ["30% SALES"],
+      "phase": "30"
+    },
+    {
+      "title": "DONATION",
+      "content": "Giving back to the community.",
+      "more": "We believe in the power of building on kindness and compassion and as a part of our roadmap, we are picking three wonderful foundations that contribute so much to an ever-changing world. We’ll be making donations of 5 ETH per foundation to:  Malala Fund (which focuses on creating solutions that allow girls to access education) The Girls who Code Foundation (that supports girls learning and working in the STEM field - science, technology, engineering, and math) She Should Run (a non-profit organization that opens the world of possibilities for women who are interested in running for public office and therefore letting their voices be heard)",
+      "tags": ["40% SALES"],
+      "phase": "40"
+    },
+    {
+      "title": "MASTERCLASS ACCESS",
+      "content": "A gift of learning ",
+      "more": "Sometimes the best way to invest is to start with investing in yourself! In the earlier stages, we provide the learning resources but, as a way to say “thank you” to our wonderful community we’ll be also giving away several free one-year passes to MasterClass and other business and self-development-themed courses.",
+      "tags": ["55% SALES"],
+      "phase": "55"
+    },
+    {
+      "title": "METAVERSE LAND",
+      "content": "Let’s run the Decentraland together.",
+      "more": "Our goal is to purchase land in Decentraland that will become an essential part of our community and our presence in the metaverse. We’ll be hosting all types of art exhibits, parties, conferences, discussions, and events. We’ll also assist our members with setting up and navigating the digital world. We’re planning a different event each month and most of them will be accessible for members only. Additionally, our NFT holders will also be a part of the DAO community and we will always be open to any initiatives regarding hosting the events/parties by those members.",
+      "tags": ["66% SALES", "METAVERSO"],
+      "phase": "66"
+    },
+    {
+      "title": "DAO",
+      "content": "Have a significant voice in the DAO community.",
+      "more": "Our DAO will allow the holders of our NFTs to vote for different ideas, plans, proposals, and other actions related to our DAO community (including future donations and contributions to different foundations and organizations). In addition, 10% of after-mint royalties will go to the DAO fund.",
+      "tags": ["90% SALES", "DAO"],
+      "phase": "90"
+    },
+    {
+      "title": "10 ETH FOR YOUR STARTUPS",
+      "content": "Create a successful business plan and win 10ETH to bring it to life!!!",
+      "more": "As stated in our mission, we are focusing on empowering entrepreneurs to dream big, work hard, and constantly learn and improve. At this stage, we’ll be giving away 10ETH for one lucky entrepreneur who comes up with the best business plan possible. The business plans will be voted by the DAO community and the best one will be chosen. The 10ETH Startup is open to both men and women!!",
+      "tags": ["SOLD OUT", "LOTTERY"],
+      "phase": "100"
+    }
+  ]
+}

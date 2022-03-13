@@ -9,6 +9,7 @@ import {
   Content,
   ContentWrapper,
   ButtonWrapper,
+  Title,
 } from "./styles";
 
 const TitleBlock = ({
@@ -28,12 +29,12 @@ const TitleBlock = ({
     });
   };
   return (
-    <TitleBlockContainer>
+    <TitleBlockContainer  id={id}>
       <Fade direction="right">
-        <Row justify="space-between" align="middle" id={id}>
-          <Col lg={11} md={11} sm={11} xs={24}>
+        <Row justify="space-between" align="middle">
+          <Col lg={24} md={24} sm={24} xs={24}>
             <ContentWrapper>
-              <h1>{t(title)}</h1>
+              <Title>{t(title)}</Title>
               <Content>{t(content)}</Content>
               <ButtonWrapper>
                 {typeof button === "object" &&
@@ -43,7 +44,7 @@ const TitleBlock = ({
                         key={id}
                         color={item.color}
                         fixedWidth={true}
-                        onClick={() => scrollTo("about")}
+                        onClick={() => window.open(item.href, "_blank")}
                       >
                         {t(item.title)}
                       </Button>
@@ -52,9 +53,9 @@ const TitleBlock = ({
               </ButtonWrapper>
             </ContentWrapper>
           </Col>
-          <Col lg={6} md={6} sm={6} xs={24}>
+          {/* <Col lg={6} md={6} sm={6} xs={24}>
             <SvgIcon src={icon} width={icon_width} height={icon_height} />
-          </Col>
+          </Col> */}
         </Row>
       </Fade>
     </TitleBlockContainer>

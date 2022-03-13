@@ -1,10 +1,9 @@
-export interface MissionBlockProps {
+export interface TeamnBlockProps {
     icon: string;
     icon_height: string;
     icon_width: string;
     title: string;
-    content: string;
-    second_content?: string;
+    content?: string;
     section?: any;
     button?: any;
     t?: any;

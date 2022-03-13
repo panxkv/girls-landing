@@ -5,6 +5,7 @@ export const MissionBlockContainer = styled("section")`
   display: flex;
   padding: 10rem 0 8rem;
 
+
   @media only screen and (max-width: 1024px) {
     padding: 8rem 0 6rem;
   }
@@ -19,7 +20,7 @@ export const Content = styled("p")`
 `;
 
 export const ContentWrapper = styled("div")`
-  padding-top: 70px;
+  // padding-top: 20px;
   position: relative;
   @media only screen and (max-width: 575px) {
     padding-bottom: 4rem;

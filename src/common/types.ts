@@ -11,6 +11,11 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
+export interface ProgressBarProps {
+  bgcolor: string;
+  completed: string;
+}
+
 export interface SvgIconProps {
   src: string;
   width: string;

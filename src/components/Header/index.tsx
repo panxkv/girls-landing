@@ -44,8 +44,8 @@ const Header = ({ t }: any) => {
       const element = document.getElementById(id) as HTMLDivElement;
       element.scrollIntoView({
         behavior: "smooth",
-        block: "center"
-        // TODO: start if mobile
+        block: "start"
+        // TODO: start if mobile, center
       });
       setVisibility(false);
     };
@@ -57,17 +57,26 @@ const Header = ({ t }: any) => {
         <CustomNavLinkSmall onClick={() => scrollTo("collection")}>
           <Span>{t("Collection")}</Span>
         </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo("roadmap")}>
+          <Span>{t("Roadmap")}</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo("team")}>
+          <Span>{t("Team")}</Span>
+        </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("contact")}>
           <Span>{t("Contact")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall
+        <CustomNavLinkSmall onClick={() => scrollTo("faq")}>
+          <Span>{t("FAQ")}</Span>
+        </CustomNavLinkSmall>
+        {/* <CustomNavLinkSmall
           style={{ width: "180px" }}
           onClick={() => scrollTo("contact")}
         >
           <Span>
             <Button>{t("Connect Wallet")} 🦊</Button>
           </Span>
-        </CustomNavLinkSmall>
+        </CustomNavLinkSmall> */}
       </>
     );
   };
@@ -77,7 +86,7 @@ const Header = ({ t }: any) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer onClick={scrollUp} to="/" aria-label="homepage">
-            <LogoText>GIRLS 🏃‍♀️ THE WORLD </LogoText>
+            <LogoText>🏃‍♀️</LogoText>
           </LogoContainer>
           <NotHidden>
             <MenuItem />

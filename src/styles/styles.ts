@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 import wave from "../images/wave.svg";
 import wave1 from "../images/wave1.svg";
+import wave2 from "../images/wave2.svg";
+import wave3 from "../images/wave3.svg";
 import section from "../images/section1.svg";
 
 export const Styles = createGlobalStyle`
@@ -16,6 +18,18 @@ export const Styles = createGlobalStyle`
     @font-face {
         font-family: "Motiva Sans Bold";
         src: url("/fonts/Motiva-Sans-Bold.ttf") format("truetype");
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "National Cartoon";
+        src: url("/fonts/National-Cartoon.ttf") format("truetype");
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Choko";
+        src: url("/fonts/Choko.ttf") format("truetype");
         font-style: normal;
     }
 
@@ -92,9 +106,6 @@ export const Styles = createGlobalStyle`
         outline: none;
         color: #0D3B66;
 
-        :hover {
-            color: #;
-        }
     }
     
     *:focus {
@@ -115,8 +126,84 @@ export const Styles = createGlobalStyle`
     .ant-drawer-content-wrapper {
         width: 300px !important;
     }
+
+    .ant-modal, .ant-modal-content {
+      position: fixed;
+      overflow-y:scroll;
+      overflow-x:hidden;
+
+
+        animation-duration: 0s !important;
+
+        background-color: #FAF0CA;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+
+       }
+       .ant-modal-body {
+        background-color: #FAF0CA;
+
+        height: calc(100vh - 110px);
+       }
+       .ant-modal-header {
+        background-color: #FAF0CA;
+        display: flex;
+        justify-content: center;
+
+       }
+       .ant-modal-title {
+        // padding: 3rem;
+        color: #0D3B66;
+
+        font-size: 3rem;
+       }
+       .ant-modal-close-x {
+        {
+            font-size: 40px;
+            margin: 50px;
+            color: #0D3B66;
+
+            &:hover,
+            &:active,
+            &:focus {
+              -webkit-transform: scale(1.01);
+              -ms-transform: scale(1.01);
+              transform: scale(1.01);
+              color: #EE964B;
+            }
+        }
 `;
 
+export const GlobalLinkRight = styled.a`
+  position: fixed;
+  background-color: #0d3b66;
+  padding: 23px 80px;
+  cursor: pointer;
+  left: -110px;
+  border-radius: 25px;
+  border: 1px solid #0d3b66;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: rotate(+90deg);
+  font-size: 18px;
+  font-weight: 500;
+  // color: #0D3B66;
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.1s ease-in-out;
+  &:hover {
+    background-color: #ee964b;
+    border: 1px solid white;
+  }
+
+  @media only screen and (max-width: 814px) {
+    display: none;
+  }
+`;
 
 const Wave = styled.div`
   position: absolute;
@@ -131,15 +218,27 @@ const Wave = styled.div`
 `;
 
 export const Wave1 = styled(Wave)`
-  top: 2340px;
+  top: 330px;
   height: 446px;
   background-image: url(${wave});
 `;
 
 export const Wave2 = styled(Wave)`
-  top: 2340px;
+  top: 380px;
   height: 446px;
   background-image: url(${wave1});
+`;
+
+export const Wave3 = styled(Wave)`
+  top: 700px;
+  height: 446px;
+  background-image: url(${wave2});
+`;
+
+export const Wave4 = styled(Wave)`
+  top: 770px;
+  height: 446px;
+  background-image: url(${wave3});
 `;
 
 export const Section = styled(Wave)`
