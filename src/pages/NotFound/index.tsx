@@ -1,7 +1,5 @@
 import { lazy } from "react";
 
-import MissionContent from "../../content/MissionContent.json";
-
 const MissionBlock = lazy(() => import("../../components/MissionBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));

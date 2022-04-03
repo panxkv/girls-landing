@@ -3,17 +3,12 @@ import { lazy } from "react";
 
 import CollectionContent from "../../content/CollectionContent.json";
 import PartnershipContent from "../../content/PartnershipContent.json";
-import AboutContent from "../../content/AboutContent.json";
 import MissionContent from "../../content/MissionContent.json";
-import ProductContent from "../../content/ProductContent.json";
 import TitleContent from "../../content/TitleContent.json";
-import ContactContent from "../../content/ContactContent.json";
 import RoadmapContent from "../../content/RoadmapContent.json";
 import TeamContent from "../../content/TeamContent.json";
 import FAQContent from "../../content/FAQContent.json";
-import { RoadmapBlockContainer } from "../../components/RoadmapBlock/styles";
 
-const Contact = lazy(() => import("../../components/ContactForm"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const FAQBlock = lazy(() => import("../../components/FAQBlock"));
 const Container = lazy(() => import("../../common/Container"));

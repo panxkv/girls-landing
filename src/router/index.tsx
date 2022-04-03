@@ -7,12 +7,8 @@ import routes from "./config";
 import {
   Styles,
   GlobalLinkRight,
-  Wave1,
   Wave2,
-  Wave3,
-  Wave4,
-  Wave5,
-  Girls
+
 } from "../styles/styles";
 
 
