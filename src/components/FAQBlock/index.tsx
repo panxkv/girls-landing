@@ -1,6 +1,5 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
-import { Button } from "../../common/Button";
 import {
   FAQBlockSection,
   ContentWrapper,
@@ -18,12 +17,6 @@ interface FAQBlockProps {
 }
 
 const FAQBlock = ({ id, title, items, t }: FAQBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
   return (
     <FAQBlockSection id={id}>
       <Row>

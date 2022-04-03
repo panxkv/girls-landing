@@ -1,6 +1,6 @@
 import { ProgressBarProps } from "../types";
 import { Container, Liquid, Filler, Label } from "./styles";
-import { Row, Col } from "antd";
+import { Row } from "antd";
 
 export const ProgressBar = ({ bgcolor, completed }: ProgressBarProps) => {
   return (

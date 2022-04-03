@@ -3,22 +3,15 @@ import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
 
-import i18n from "i18next";
 import {
   FooterSection,
-  Title,
   NavLink,
   Extra,
   LogoContainer,
   Para,
   Large,
-  Chat,
-  Empty,
   FooterContainer,
   Language,
-  Label,
-  LanguageSwitch,
-  LanguageSwitchContainer,
   LogoText,
 } from "./styles";
 
@@ -33,16 +26,12 @@ interface ButtonMailtoProps {
 }
 
 const Footer = ({ t }: any) => {
-  const handleChange = (language: string) => {
-    i18n.changeLanguage(language);
-  };
-
   const SocialLink = ({ href, src }: SocialLinkProps) => {
     return (
       <a
         href={href}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noreferrer"
         key={src}
         aria-label={src}
       >
@@ -121,10 +110,20 @@ const Footer = ({ t }: any) => {
         </Container>
       </Extra>
       <Row justify="center" align="middle">
-        <Col >Girls Run The World © 2022</Col>
+        <Col>Girls Run The World © 2022</Col>
       </Row>
       <Row justify="center" align="middle">
-        <Col> Made out of ❤️ for women by <a target="_blank" href="https://twitter.com/im_a_kk">KK</a> </Col>
+        <Col>
+          {" "}
+          Made out of ❤️ for women by{" "}
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://twitter.com/im_a_kk"
+          >
+            KK
+          </a>{" "}
+        </Col>
       </Row>
     </>
   );
