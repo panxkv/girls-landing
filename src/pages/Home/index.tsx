@@ -1,5 +1,6 @@
 import { lazy } from "react";
 
+
 import CollectionContent from "../../content/CollectionContent.json";
 import PartnershipContent from "../../content/PartnershipContent.json";
 import AboutContent from "../../content/AboutContent.json";
@@ -25,9 +26,8 @@ const TeamBlock = lazy(() => import("../../components/TeamBlock"));
 
 const Home = () => {
   return (
-    <Container>
-      <ScrollToTop />
-      <TitleBlock
+    <>
+         <TitleBlock
         title={TitleContent.title}
         content={TitleContent.text}
         button={TitleContent.button}
@@ -36,6 +36,8 @@ const Home = () => {
         icon="world.svg"
         id="intro"
       />
+        <Container>
+      <ScrollToTop />
       <MissionBlock
         title={MissionContent.title}
         content={MissionContent.text}
@@ -72,23 +74,25 @@ const Home = () => {
         icon="girl.svg"
         id="team"
       />
-      <MiddleBlock
-        title={PartnershipContent.title}
-        content={PartnershipContent.text}
-        button={PartnershipContent.button}
-        id="contact"
-      />
-      <Contact
-        title={ContactContent.title}
-        content={ContactContent.text}
-        id="dupka"
-      />
       <FAQBlock
         title={FAQContent.title}
         items={FAQContent.items}
         id="faq"
       />
+        <MiddleBlock
+        title={PartnershipContent.title}
+        content={PartnershipContent.text}
+        button={PartnershipContent.button}
+        id="contact"
+      />
+      {/* <Contact
+        title={ContactContent.title}
+        content={ContactContent.text}
+        id="dupka"
+      /> */}
     </Container>
+    </>
+
   );
 };
 

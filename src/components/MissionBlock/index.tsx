@@ -35,93 +35,6 @@ const MissionBlock = ({
     });
   };
 
-  const nftsMarketCap = {
-    options: {
-      chart: {
-        id: "marketcap-nfts",
-        fontFamily: 'Josefin Sans Light", sans-serif',
-
-        toolbar: {
-          show: false
-        }
-      },
-      colors: ['#0d3b66'],
-      dataLabels: {
-        enabled: false
-      },
-      fill: {
-        type: 'solid',
-        opacity: 1
-      },
-
-      title: {
-        // text: "by market cap",
-        style: {
-          fontSize: "20px",
-          fontWeight: "bold",
-          color: "#ee964b",
-          fontFamily: 'Josefin Sans Light", sans-serif',
-        },
-      },
-      xaxis: {
-        categories: [2017 ,2018, 2019, 2020, 2021],
-      },
-      yaxis: {
-        labels: {
-          formatter: function (value: any) {
-            return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " $";
-          }
-        },
-      }
-    },
-   
-    series: [
-      {
-        name: "capitalization $",
-        data: [30976025, 180219478, 210558198, 315712346, 710890777],
-      },
-    ],
-  };
-
-  const womentInNft = {
-    options: {
-      labels: ["MALE", "FEMALE "],
-      theme: {
-        monochrome: {
-          enabled: false,
-        },
-      },
-   
-      chart: {
-        fontFamily: 'Josefin Sans Light", sans-serif'
-      },
-      title: {
-        // text: "by gender",
-        style: {
-          fontSize: "20px",
-          fontWeight: "bold",
-          color: "#ee964b",
-          fontFamily: 'Josefin Sans Light", sans-serif',
-        },
-      },
-      colors: ["#0d3b66", "#F4D35E"],
-      responsive: [
-        {
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: "100%",
-            },
-            legend: {
-              show: false,
-            },
-          },
-        },
-      ],
-    },
-    series: [81, 19.2],
-  };
-
   return (
     <MissionBlockContainer id={id}>
       <Fade direction="right">
@@ -130,6 +43,9 @@ const MissionBlock = ({
             <ContentWrapper>
               <h1>{t(title)}</h1>
               <Content>{t(content)}</Content>
+              {typeof second_content === "string" && (
+                <Content>{t(second_content)}</Content>
+              )}
               <ServiceWrapper>
                 <Row justify="space-between">
                   {typeof section === "object" &&
@@ -163,35 +79,6 @@ const MissionBlock = ({
           </Col>
         </Row>
       </Fade>
-      <MinTitle>NFT mareket facts</MinTitle>
-      <Row align="middle" justify="space-between" >
-        <Col xl={12} lg={12} md={24} sm={24} xs={24}>
-
-          <Chart options={nftsMarketCap.options} series={nftsMarketCap.series} type="area" width="100%" height="300px" />    
-            Source: ConinMarketcap           
-          {/* <Chart
-            options={womentInNft.options}
-            series={womentInNft.series}
-            type="pie"
-            width="100%"
-            height="300px"
-          /> */}
-        </Col>
-        <Col xl={12} lg={12} md={24} sm={24} xs={24}>
-          <Chart
-            options={womentInNft.options}
-            series={womentInNft.series}
-            type="pie"
-            width="100%"
-            height="300px"
-          />
-        </Col>
-      </Row>
-      <ContentWrapper>
-      {typeof second_content === "string" && (
-                <Content>{t(second_content)}</Content>
-              )}
-      </ContentWrapper>
     </MissionBlockContainer>
   );
 };

@@ -26,7 +26,9 @@ const MiddleBlock = ({ id, title, content, button, t }: MiddleBlockProps) => {
             <h6>{t(title)}</h6>
             {content && <Content>{t(content)}</Content>}
             {button && (
-              <Button name="submit" onClick={() => scrollTo("mission")}>
+              <Button onClick={() => {
+                window.location.href = "mailto:elo@elo.pl";
+            }}>
                 {t(button)}
               </Button>
             )}

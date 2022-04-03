@@ -27,6 +27,11 @@ interface SocialLinkProps {
   src: string;
 }
 
+interface ButtonMailtoProps {
+  mailto: string;
+  label: string;
+}
+
 const Footer = ({ t }: any) => {
   const handleChange = (language: string) => {
     i18n.changeLanguage(language);
@@ -46,6 +51,20 @@ const Footer = ({ t }: any) => {
     );
   };
 
+  const ButtonMailto = ({ mailto, label }: ButtonMailtoProps) => {
+    return (
+      <Large
+        to="#"
+        onClick={(e: any) => {
+          window.location.href = mailto;
+          e.preventDefault();
+        }}
+      >
+        {label}
+      </Large>
+    );
+  };
+
   return (
     <>
       <FooterSection>
@@ -53,20 +72,22 @@ const Footer = ({ t }: any) => {
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
               <Language>{t("Contact")}</Language>
-              <Large to="/">{t("Tell us everything")}</Large>
+              {/* <ButtonMailto to="">{t("Tell us everything")}</ButtonMailto> */}
+              <ButtonMailto
+                label="Tell us everything"
+                mailto="mailto:info@girlsruntheworld.art"
+              />
+
               <Para>
                 {t(`Do you have any question? Feel free to reach out.`)}
               </Para>
             </Col>
-            <Col lg={8} md={8} sm={12} xs={12}>
+            {/* <Col lg={8} md={8} sm={12} xs={12}>
               <Title>{t("Policy")}</Title>
-              <Large to="/" left="true">
-                {t("Application Security")}
+              <Large to="/legal-page " left="true">
+                {t("Legal Page")}
               </Large>
-              <Large left="true" to="/">
-                {t("Software Principles")}
-              </Large>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </FooterSection>
@@ -79,17 +100,17 @@ const Footer = ({ t }: any) => {
           >
             <NavLink to="/">
               <LogoContainer>
-                <LogoText>GRTW 🏃‍♀️</LogoText>
+                <LogoText>GIRLS RUN THE WORLD</LogoText>
               </LogoContainer>
             </NavLink>
             <FooterContainer>
               <SocialLink
-                href="https://twitter.com/grilsrunnft"
-                src="twitter.svg"
+                href="https://medium.com/@girls_run_the_world_nft"
+                src="medium.svg"
               />
               <SocialLink
-                href="https://medium.com/@girlsruntheworld/"
-                src="medium.svg"
+                href="https://twitter.com/girlsrunthe_NFT"
+                src="twitter.svg"
               />
               {/* <SocialLink
                 href="https://medium.com/@lashakakabadze/"
@@ -99,6 +120,12 @@ const Footer = ({ t }: any) => {
           </Row>
         </Container>
       </Extra>
+      <Row justify="center" align="middle">
+        <Col >Girls Run The World © 2022</Col>
+      </Row>
+      <Row justify="center" align="middle">
+        <Col> Made out of ❤️ for women by <a target="_blank" href="https://twitter.com/im_a_kk">KK</a> </Col>
+      </Row>
     </>
   );
 };

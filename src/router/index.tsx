@@ -12,24 +12,22 @@ import {
   Wave3,
   Wave4,
   Wave5,
+  Girls
 } from "../styles/styles";
+
+
 
 const Router = () => {
   return (
     <Suspense fallback={null}>
       <Styles />
-      <Wave1 />
       <Wave2 />
-      <Wave4 />
-      <Wave3 />
-      {/* <Wave5 /> */}
-
-      <GlobalLinkRight href="https://youtu.be/7IoMG_NN7lA" target="_blank">
+      <GlobalLinkRight href="https://discord.gg/nvMKWZC8Gb" target="_blank">
 
           Join Discrod
 
       </GlobalLinkRight>
-      <Header />
+     <Header />
       <Switch>
         {routes.map((routeItem) => {
           return (

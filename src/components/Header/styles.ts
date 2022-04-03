@@ -5,7 +5,8 @@ import { MenuOutlined } from "@ant-design/icons";
 export const HeaderSection = styled("header")`
   position: sticky;
   top: 0;
-  background-color: #FAF0CA;
+  background-color: #0D3B66;
+  color: #EE964B;
   z-index: 999;
   padding: 1rem 0.5rem;
 
@@ -29,6 +30,7 @@ export const LogoText = styled("div")`
 `;
 
 export const NavLink = styled("div")`
+
   display: inline-block;
   text-align: center;
 `;
@@ -63,7 +65,7 @@ export const Burger = styled("div")`
   display: none;
 
   svg {
-    fill: #2e186a;
+    fill: white;
   }
 `;
 
@@ -106,6 +108,11 @@ export const Outline = styled(MenuOutlined)<any>`
 export const Span = styled("span")`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  color: white;
+
+  @media only screen and (max-width: 890px) {
+   color: #0D3B66;
+  }
 
   &:hover,
   &:active,

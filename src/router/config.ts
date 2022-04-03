@@ -4,6 +4,10 @@ const routes = [
     exact: true,
     component: "Home",
   },
+  {
+    exact: true,
+    component: "NotFound",
+  }
 ];
 
 export default routes;

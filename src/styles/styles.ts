@@ -7,6 +7,7 @@ import wave2 from "../images/wave2.svg";
 import wave3 from "../images/wave3.svg";
 import wave4 from "../images/wave4.svg";
 import section from "../images/section1.svg";
+import girls from "../images/girls.png"
 
 export const Styles = createGlobalStyle`
 
@@ -22,19 +23,6 @@ export const Styles = createGlobalStyle`
         font-style: normal;
     }
 
-    @font-face {
-        font-family: "National Cartoon";
-        src: url("/fonts/National-Cartoon.ttf") format("truetype");
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: "Choko";
-        src: url("/fonts/Choko.ttf") format("truetype");
-        font-style: normal;
-    }
-
-
     body,
     html,
     a {
@@ -48,7 +36,6 @@ export const Styles = createGlobalStyle`
         border: 0;
         outline: 0;
         background: #faf0ca;
-        // Lemon Meringue
         overflow-x: hidden;
     }
 
@@ -180,7 +167,8 @@ export const Styles = createGlobalStyle`
 
 export const GlobalLinkRight = styled.a`
   position: fixed;
-  background-color: #0d3b66;
+  background-color: white;
+  /* color: #404EED; */
   padding: 23px 80px;
   cursor: pointer;
   left: -110px;
@@ -191,13 +179,15 @@ export const GlobalLinkRight = styled.a`
   transform: rotate(+90deg);
   font-size: 18px;
   font-weight: 500;
-  // color: #0D3B66;
-  color: white;
+  z-index: 91;
+
+  /* // color: #0D3B66; */
+  /* color: white; */
   text-decoration: none;
   text-transform: capitalize;
   transition: all 0.1s ease-in-out;
   &:hover {
-    background-color: #ee964b;
+    background-color: #404EED;
     border: 1px solid white;
   }
 
@@ -219,31 +209,39 @@ const Wave = styled.div`
 `;
 
 export const Wave1 = styled(Wave)`
-  top: 330px;
+  top: 260px;
   height: 446px;
   background-image: url(${wave});
 `;
 
 export const Wave2 = styled(Wave)`
-  top: 380px;
+  top: 480px;
+  /* z-index: 1; */
   height: 446px;
   background-image: url(${wave1});
 `;
 
+export const Girls = styled(Wave)`
+  top: 320px;
+  /* z-index: 2; */
+  height: 100%;
+  background-image: url(${girls});
+`;
+
 export const Wave3 = styled(Wave)`
-  top: 700px;
+  top: 585px;
   height: 446px;
   background-image: url(${wave2});
 `;
 
 export const Wave4 = styled(Wave)`
-  top: 770px;
+  top: 605px;
   height: 446px;
   background-image: url(${wave3});
 `;
 
 export const Wave5 = styled(Wave)`
-  top: 1080px;
+  top: 1380px;
   height: 446px;
   background-image: url(${wave4});
 `;
