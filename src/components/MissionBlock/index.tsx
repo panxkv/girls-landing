@@ -4,7 +4,6 @@ import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
 import { MissionBlockProps } from "./types";
 import { Fade } from "react-awesome-reveal";
-import Chart from "react-apexcharts";
 
 import {
   MissionBlockContainer,
@@ -22,9 +21,6 @@ const MissionBlock = ({
   button,
   section,
   second_content,
-  icon,
-  icon_width,
-  icon_height,
   t,
   id,
 }: MissionBlockProps) => {

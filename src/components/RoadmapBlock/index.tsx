@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import { Row, Col, Modal } from "antd";
 import { withTranslation } from "react-i18next";
-import { SvgIcon } from "../../common/SvgIcon";
-import { Button } from "../../common/Button";
 
 import { RoadmapBlockProps } from "./types";
 import { Fade } from "react-awesome-reveal";
@@ -11,8 +9,6 @@ import {
   RoadmapBlockContainer,
   Content,
   ContentWrapper,
-  ButtonWrapper,
-  ServiceWrapper,
   KanbanBoard,
   KanbanColumn,
   MinPara,
@@ -23,27 +19,16 @@ import {
   OverlayAnchor,
   Tag,
   ModalWrapper,
-  Phase,
 } from "./styles";
 import { ProgressBar } from "../../common/ProgressBar";
 
 const RoadmapBlock = ({
   title,
   content,
-  button,
   roadmapItems,
-  icon,
-  icon_width,
-  icon_height,
   t,
   id,
 }: RoadmapBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
   const openModal = (modalContent?: any) => {
     setVisible(true);
     setModalContent(modalContent);
