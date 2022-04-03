@@ -1,7 +1,6 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
-import { Button } from "../../common/Button";
 import { TeamnBlockProps } from "./types";
 import { Fade } from "react-awesome-reveal";
 
@@ -13,7 +12,6 @@ import {
   TeamBlockContainer,
   Content,
   ContentWrapper,
-  ButtonWrapper,
   ServiceWrapper,
   MinPara,
   MinTitle,
@@ -60,21 +58,10 @@ const SocialLink = ({ href, src }: SocialLinkProps) => {
 const TeamBlock = ({
   title,
   content,
-  button,
   section,
-
-  icon,
-  icon_width,
-  icon_height,
   t,
   id,
 }: TeamnBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
   return (
     <TeamBlockContainer id={id}>
       <Fade direction="right">

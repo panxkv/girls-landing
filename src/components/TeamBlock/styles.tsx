@@ -1,4 +1,3 @@
-import { initReactI18next } from "react-i18next";
 import styled from "styled-components";
 import ania from "../../images/ania.png"
 

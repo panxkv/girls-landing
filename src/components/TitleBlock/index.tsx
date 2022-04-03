@@ -1,22 +1,16 @@
-import { Row, Col } from "antd";
-import { Suspense, useRef, useState, ReactChildren, ReactChild } from "react";
+import { Suspense } from "react";
 
-import { Canvas, useThree, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import {
   Loader,
-  useGLTF,
   OrbitControls,
   PerspectiveCamera,
   Stars,
 } from "@react-three/drei";
 
-import * as THREE from "three";
-
 import { withTranslation } from "react-i18next";
-import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
 import { TitleBlockProps } from "./types";
-import { Fade } from "react-awesome-reveal";
 import {
   TitleBlockContainer,
   Content,
@@ -30,42 +24,33 @@ import {
 
 import Final from "../3D/Final";
 
-const TitleBlock = ({
-  title,
-  content,
-  button,
-  icon,
-  icon_width,
-  icon_height,
-  t,
-  id,
-}: TitleBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+const TitleBlock = ({ title, content, button, t, id }: TitleBlockProps) => {
+  // const scrollTo = (id: string) => {
+  //   const element = document.getElementById(id) as HTMLDivElement;
+  //   element.scrollIntoView({
+  //     behavior: "smooth",
+  //   });
+  // };
 
-  interface RigProps {
-    children: ReactChild | ReactChildren;
-  }
+  // interface RigProps {
+  //   children: ReactChild | ReactChildren;
+  // }
 
-  function Rig({ children }: RigProps) {
-    const ref: any = useRef();
-    const vec = new THREE.Vector3();
-    const { camera, mouse } = useThree();
-    useFrame(() => {
-      camera.position.lerp(vec.set(mouse.x * -2, 12, 3.5), 0.05);
-      ref.current.position.lerp(vec.set(mouse.x * -1, mouse.y * 0.1, 0), 0.1);
-      ref.current.rotation.y = THREE.MathUtils.lerp(
-        ref.current.rotation.y,
-        (-mouse.x * Math.PI) / 20,
-        0.1
-      );
-    });
-    return <group ref={ref}>{children}</group>;
-  }
+  // function Rig({ children }: RigProps) {
+  //   const ref: any = useRef();
+  //   const vec = new THREE.Vector3();
+  //   const { camera, mouse } = useThree();
+  //   useFrame(() => {
+  //     camera.position.lerp(vec.set(mouse.x * -2, 12, 3.5), 0.05);
+  //     ref.current.position.lerp(vec.set(mouse.x * -1, mouse.y * 0.1, 0), 0.1);
+  //     ref.current.rotation.y = THREE.MathUtils.lerp(
+  //       ref.current.rotation.y,
+  //       (-mouse.x * Math.PI) / 20,
+  //       0.1
+  //     );
+  //   });
+  //   return <group ref={ref}>{children}</group>;
+  // }
   return (
     <TitleBlockContainer id={id}>
       {/* <Content>{t(content)}</Content> */}
@@ -91,7 +76,7 @@ const TitleBlock = ({
           />
         </PerspectiveCamera>
         <Suspense fallback={null}>
-          <Final ></Final>
+          <Final></Final>
         </Suspense>
         <OrbitControls
           autoRotate
@@ -109,10 +94,11 @@ const TitleBlock = ({
         />
         {/* <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade /> */}
       </Canvas>
-        <ContentWrapper>
-        <Title>{t(title)}
-        <span style={{ fontSize: '0.4em' }}>RUN THE</span>
-        WORLD
+      <ContentWrapper>
+        <Title>
+          {t(title)}
+          <span style={{ fontSize: "0.4em" }}>RUN THE</span>
+          WORLD
         </Title>
         <ButtonWrapper>
           {typeof button === "object" &&
@@ -129,11 +115,9 @@ const TitleBlock = ({
               );
             })}
         </ButtonWrapper>
-
       </ContentWrapper>
       <SubtitleWrapper>
-
-      <Content>{t(content)}</Content>
+        <Content>{t(content)}</Content>
       </SubtitleWrapper>
       <Layer />
       <Loader />
