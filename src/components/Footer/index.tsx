@@ -88,13 +88,13 @@ const Footer = ({ t }: any) => {
                 src="twitter.svg"
               />
               <SocialLink
-                href="https://medium.com/@lashakakabadze/"
+                href="https://medium.com/@girlsruntheworld/"
                 src="medium.svg"
               />
-              <SocialLink
+              {/* <SocialLink
                 href="https://medium.com/@lashakakabadze/"
                 src="open-sea.svg"
-              />
+              /> */}
             </FooterContainer>
           </Row>
         </Container>

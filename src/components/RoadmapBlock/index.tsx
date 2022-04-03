@@ -88,6 +88,8 @@ const RoadmapBlock = ({
               <KanbanBoard>
                 <KanbanColumn>
                   <KanbanColumnHeader>Pipeline</KanbanColumnHeader>
+                  <KanbanCard> Here is what we plan </KanbanCard>
+
                   {typeof roadmapItems === "object" &&
                     roadmapItems.map((item: any, id: number) => {
                       return (
@@ -101,7 +103,7 @@ const RoadmapBlock = ({
                               })
                             }
                           >
-                            <OverlayAnchor>READ MORE</OverlayAnchor>
+                            <OverlayAnchor>More</OverlayAnchor>
                           </Overlay>
                           {/* <SvgIcon src={item.icon} width="60px" height="60px" /> */}
                           <MinTitle>{t(item.title)}</MinTitle>
@@ -118,6 +120,7 @@ const RoadmapBlock = ({
                 </KanbanColumn>
                 <KanbanColumn>
                   <KanbanColumnHeader>Completed</KanbanColumnHeader>
+                  <KanbanCard> This is what w've done </KanbanCard>
                 </KanbanColumn>
               </KanbanBoard>
             </ContentWrapper>

@@ -5,6 +5,7 @@ import wave from "../images/wave.svg";
 import wave1 from "../images/wave1.svg";
 import wave2 from "../images/wave2.svg";
 import wave3 from "../images/wave3.svg";
+import wave4 from "../images/wave4.svg";
 import section from "../images/section1.svg";
 
 export const Styles = createGlobalStyle`
@@ -239,6 +240,12 @@ export const Wave4 = styled(Wave)`
   top: 770px;
   height: 446px;
   background-image: url(${wave3});
+`;
+
+export const Wave5 = styled(Wave)`
+  top: 1080px;
+  height: 446px;
+  background-image: url(${wave4});
 `;
 
 export const Section = styled(Wave)`

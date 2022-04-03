@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const MissionBlockContainer = styled("section")`
   position: relative;
   display: flex;
+  flex-direction: column;
   padding: 10rem 0 8rem;
 
 
@@ -49,11 +50,12 @@ export const ServiceWrapper = styled("div")`
 `;
 
 export const MinTitle = styled("h6")`
-  font-size: 18px;
-  line-height: 1rem;
-  padding: 0.5rem 0;
-  text-transform: uppercase;
-  color: #EE964B;
+  color: #0d3b66;
+  /* font-weight: bold; */
+  font-size: 1.875rem;
+  padding-bottom: 20px;
+  /* text-transform: uppercase; */
+
   font-family: "Josefin Sans Light", sans-serif;
 `;
 

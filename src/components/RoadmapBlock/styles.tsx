@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const RoadmapBlockContainer = styled("section")`
   position: relative;
   scroll-margin-top: 110px;
-
-  // padding: 7.5rem 0 3rem;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -27,10 +25,9 @@ export const KanbanBoard = styled("div")`
   border-radius: 25px;
   @media screen and (max-width: 700px) {
     max-width: 100%;
-    flex-direction: column;
+    /* flex-direction: column; */
   }
   flex-direction: row;
-  // background-color: #F4D35E;
 `;
 
 export const KanbanColumn = styled("div")`
@@ -39,7 +36,6 @@ export const KanbanColumn = styled("div")`
   flex-direction: column;
   flex: 1;
   overflow-y: auto;
-  // background-color: #F4D35E;
   margin: 0;
   padding: 10px 10px 0;
 
@@ -48,7 +44,6 @@ export const KanbanColumn = styled("div")`
 
 export const KanbanColumnHeader = styled("div")`
   color: #0d3b66;
-  // padding: 10px;
   font-weight: bold;
   font-size: 1.875rem;
 `;
@@ -103,7 +98,6 @@ export const OverlayAnchor = styled("a")`
     -webkit-transform: scale(1.11);
     -ms-transform: scale(1.11);
     transform: scale(1.11);
-    // color: #ee964b;
   }
 `;
 
@@ -152,11 +146,7 @@ export const MinPara = styled("p")`
 `;
 
 export const ModalWrapper = styled("div")`
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
   border-radius: 25px;
-
   background-color: white;
   position: relative;
   border: 1px solid #0d3b66;
@@ -164,8 +154,6 @@ export const ModalWrapper = styled("div")`
   text-align: center;
   display: flex;
   justify-content: center;
-
-  // text-align: center;
   font-size: 24px;
 `;
 

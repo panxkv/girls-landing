@@ -72,15 +72,6 @@ const Home = () => {
         icon="girl.svg"
         id="team"
       />
-      {/* <ContentBlock
-        type="left"
-        title={ProductContent.title}
-        content={ProductContent.text}
-        icon_height="100%"
-        icon_width="100%"
-        icon="waving.svg"
-        id="product"
-      /> */}
       <MiddleBlock
         title={PartnershipContent.title}
         content={PartnershipContent.text}

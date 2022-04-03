@@ -11,6 +11,7 @@ import {
   Wave2,
   Wave3,
   Wave4,
+  Wave5,
 } from "../styles/styles";
 
 const Router = () => {
@@ -21,6 +22,7 @@ const Router = () => {
       <Wave2 />
       <Wave4 />
       <Wave3 />
+      {/* <Wave5 /> */}
 
       <GlobalLinkRight href="https://youtu.be/7IoMG_NN7lA" target="_blank">
 
