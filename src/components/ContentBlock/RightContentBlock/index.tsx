@@ -16,6 +16,8 @@ const RightBlock = ({
   content,
   button,
   icon,
+  icon_width,
+  icon_height,
   t,
   id,
 }: ContentBlockProps) => {
@@ -26,9 +28,9 @@ const RightBlock = ({
     });
   };
   return (
-    <RightBlockContainer>
+    <RightBlockContainer id={id}>
       <Fade direction="right">
-        <Row justify="space-between" align="middle" id={id}>
+        <Row justify="space-between" align="middle" >
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
               <h6>{t(title)}</h6>
@@ -51,7 +53,9 @@ const RightBlock = ({
             </ContentWrapper>
           </Col>
           <Col lg={11} md={11} sm={12} xs={24}>
-            <SvgIcon src={icon} width="100%" height="100%" />
+            <video width={icon_width} height={icon_height} autoPlay muted loop>
+              <source src={icon}  type="video/mp4" />
+            </video>
           </Col>
         </Row>
       </Fade>

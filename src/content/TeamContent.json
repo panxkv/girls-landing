@@ -1,0 +1,46 @@
+{
+  "title": "Meet the team",
+  "section": [
+    {
+      "title": "Anna Dąbrowa",
+      "content": "She is the co-founder of Girls Run the World Project. Anna is an Entrepreneur in the European market and has been running e-commerce in Germany for 3 years.",
+      "icon": "ania",
+      "social_links": [
+        {
+          "icon": "twitter.svg",
+          "href": "https://twitter.com/girlin_NFT"
+        },
+        {
+          "icon": "instagram.svg",
+          "href": "https://www.instagram.com/aniadabrowa/"
+        }
+      ]
+    },
+    {
+      "title": "Edyta Kawka",
+      "content": "She is the co-founder of the Girls Who Run the World Project. Edyta is a self-made Entrepreneur, an aspiring Author and the Los Angeles 2020 Marathon Finisher.",
+      "icon": "edyta",
+      "social_links": [
+        {
+          "icon": "twitter.svg",
+          "href": "https://twitter.com/edytaxkawka"
+        },
+        {
+          "icon": "instagram.svg",
+          "href": "https://www.instagram.com/edyta_kawka/"
+        }
+      ]
+    },
+    {
+      "title": "Kamil Kiedrzyn",
+      "content": "A blockchain technology enthusiast and a proud NFT collector. Nomadic full stack developer and bootstrapped company lover. ERC-721 maestro.",
+      "icon": "kamil",
+      "social_links": [
+        {
+          "icon": "twitter.svg",
+          "href": "https://twitter.com/im_a_kk"
+        }
+      ]
+    }
+  ]
+}

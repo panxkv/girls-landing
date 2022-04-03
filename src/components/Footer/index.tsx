@@ -19,11 +19,17 @@ import {
   Label,
   LanguageSwitch,
   LanguageSwitchContainer,
+  LogoText,
 } from "./styles";
 
 interface SocialLinkProps {
   href: string;
   src: string;
+}
+
+interface ButtonMailtoProps {
+  mailto: string;
+  label: string;
 }
 
 const Footer = ({ t }: any) => {
@@ -45,6 +51,20 @@ const Footer = ({ t }: any) => {
     );
   };
 
+  const ButtonMailto = ({ mailto, label }: ButtonMailtoProps) => {
+    return (
+      <Large
+        to="#"
+        onClick={(e: any) => {
+          window.location.href = mailto;
+          e.preventDefault();
+        }}
+      >
+        {label}
+      </Large>
+    );
+  };
+
   return (
     <>
       <FooterSection>
@@ -52,77 +72,22 @@ const Footer = ({ t }: any) => {
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
               <Language>{t("Contact")}</Language>
-              <Large to="/">{t("Tell us everything")}</Large>
+              {/* <ButtonMailto to="">{t("Tell us everything")}</ButtonMailto> */}
+              <ButtonMailto
+                label="Tell us everything"
+                mailto="mailto:info@girlsruntheworld.art"
+              />
+
               <Para>
                 {t(`Do you have any question? Feel free to reach out.`)}
               </Para>
-              <a href="mailto:l.qqbadze@gmail.com">
-                <Chat>{t(`Let's Chat`)}</Chat>
-              </a>
             </Col>
-            <Col lg={8} md={8} sm={12} xs={12}>
+            {/* <Col lg={8} md={8} sm={12} xs={12}>
               <Title>{t("Policy")}</Title>
-              <Large to="/" left="true">
-                {t("Application Security")}
+              <Large to="/legal-page " left="true">
+                {t("Legal Page")}
               </Large>
-              <Large left="true" to="/">
-                {t("Software Principles")}
-              </Large>
-            </Col>
-            <Col lg={6} md={6} sm={12} xs={12}>
-              <Empty />
-              <Large left="true" to="/">
-                {t("Support Center")}
-              </Large>
-              <Large left="true" to="/">
-                {t("Customer Support")}
-              </Large>
-            </Col>
-          </Row>
-          <Row justify="space-between">
-            <Col lg={10} md={10} sm={12} xs={12}>
-              <Empty />
-              <Language>{t("Address")}</Language>
-              <Para>Rancho Santa Margarita</Para>
-              <Para>2131 Elk Street</Para>
-              <Para>California</Para>
-            </Col>
-            <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{t("Company")}</Title>
-              <Large left="true" to="/">
-                {t("About")}
-              </Large>
-              <Large left="true" to="/">
-                {t("Blog")}
-              </Large>
-              <Large left="true" to="/">
-                {t("Press")}
-              </Large>
-              <Large left="true" to="/">
-                {t("Careers & Culture")}
-              </Large>
-            </Col>
-            <Col lg={6} md={6} sm={12} xs={12}>
-              <Label htmlFor="select-lang">{t("Language")}</Label>
-              <LanguageSwitchContainer>
-                <LanguageSwitch onClick={() => handleChange("en")}>
-                  <SvgIcon
-                    src="united-states.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-                <LanguageSwitch onClick={() => handleChange("es")}>
-                  <SvgIcon
-                    src="spain.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-              </LanguageSwitchContainer>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </FooterSection>
@@ -135,41 +100,32 @@ const Footer = ({ t }: any) => {
           >
             <NavLink to="/">
               <LogoContainer>
-                <SvgIcon
-                  src="logo.svg"
-                  aria-label="homepage"
-                  width="101px"
-                  height="64px"
-                />
+                <LogoText>GIRLS RUN THE WORLD</LogoText>
               </LogoContainer>
             </NavLink>
             <FooterContainer>
               <SocialLink
-                href="https://github.com/Adrinlol/create-react-app-adrinlol"
-                src="github.svg"
-              />
-              <SocialLink
-                href="https://twitter.com/Adrinlolx"
-                src="twitter.svg"
-              />
-              <SocialLink
-                href="https://www.linkedin.com/in/lasha-kakabadze/"
-                src="linkedin.svg"
-              />
-              <SocialLink
-                href="https://medium.com/@lashakakabadze/"
+                href="https://medium.com/@girls_run_the_world_nft"
                 src="medium.svg"
               />
-              <a href="https://www.buymeacoffee.com/adrinlol">
-                <img
-                  src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=adrinlol&button_colour=FF5F5F&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"
-                  alt="Buy me a pizza"
-                />
-              </a>
+              <SocialLink
+                href="https://twitter.com/girlsrunthe_NFT"
+                src="twitter.svg"
+              />
+              {/* <SocialLink
+                href="https://medium.com/@lashakakabadze/"
+                src="open-sea.svg"
+              /> */}
             </FooterContainer>
           </Row>
         </Container>
       </Extra>
+      <Row justify="center" align="middle">
+        <Col >Girls Run The World © 2022</Col>
+      </Row>
+      <Row justify="center" align="middle">
+        <Col> Made out of ❤️ for women by <a target="_blank" href="https://twitter.com/im_a_kk">KK</a> </Col>
+      </Row>
     </>
   );
 };
