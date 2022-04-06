@@ -22,7 +22,7 @@ import {
   Layer,
 } from "./styles";
 
-import Final from "../3D/Final";
+import Globe from "../3D/Globe";
 
 const TitleBlock = ({ title, content, button, t, id }: TitleBlockProps) => {
   // const scrollTo = (id: string) => {
@@ -76,7 +76,7 @@ const TitleBlock = ({ title, content, button, t, id }: TitleBlockProps) => {
           />
         </PerspectiveCamera>
         <Suspense fallback={null}>
-          <Final></Final>
+          <Globe></Globe>
         </Suspense>
         <OrbitControls
           autoRotate
