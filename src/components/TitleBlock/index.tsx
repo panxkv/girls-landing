@@ -1,6 +1,8 @@
 import { Suspense } from "react";
 
 import { Canvas } from "@react-three/fiber";
+import { SvgIcon } from "../../common/SvgIcon";
+
 import {
   Loader,
   OrbitControls,
@@ -20,17 +22,18 @@ import {
   SubtitleWrapper,
   Bg,
   Layer,
+  Icon,
 } from "./styles";
 
 import Globe from "../3D/Globe";
 
 const TitleBlock = ({ title, content, button, t, id }: TitleBlockProps) => {
-  // const scrollTo = (id: string) => {
-  //   const element = document.getElementById(id) as HTMLDivElement;
-  //   element.scrollIntoView({
-  //     behavior: "smooth",
-  //   });
-  // };
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id) as HTMLDivElement;
+    element.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
   // interface RigProps {
   //   children: ReactChild | ReactChildren;
@@ -115,6 +118,9 @@ const TitleBlock = ({ title, content, button, t, id }: TitleBlockProps) => {
               );
             })}
         </ButtonWrapper>
+        <Icon onClick={() => scrollTo("mission")}>See mission <br/><SvgIcon src="scroll-down.svg" width="20px" height="20px" />
+</Icon>
+
       </ContentWrapper>
       <SubtitleWrapper>
         <Content>{t(content)}</Content>

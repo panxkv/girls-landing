@@ -29,11 +29,11 @@ export const Content = styled("p")`
 
   margin: 1.5rem 0 2rem 0;
 
-   animation: color-animation 6s linear infinite;
+  animation: color-animation 6s linear infinite;
 
-   --color-1: #fff;
+  --color-1: #fff;
   --color-2: #f4d35e;
-  --color-3: #FAF0CA;
+  --color-3: #faf0ca;
 
   @keyframes color-animation {
     0% {
@@ -58,6 +58,10 @@ export const Content = styled("p")`
       color: var(--color-1);
     }
   }
+
+  @media only screen and (max-width: 575px) {
+    display: none;
+  }
 `;
 
 export const Title = styled("h1")`
@@ -70,22 +74,31 @@ export const Title = styled("h1")`
   bottom: 0;
   margin: 0;
   font-weight: bold;
-  color: #FAF0CA;
+  color: #faf0ca;
   /* line-height: 0.6em; */
   letter-spacing: 20px;
   /* text-align: left; */
 
-  @media only screen and (max-width: 520px) {
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 1.8em;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1.8em;
+  }
+
+  /* @media only screen and (max-width: 520px) {
     font-size: 1.4em;
     /* letter-spacing: 20px; */
     /* font-weight: bold; */
-  }
+  } */
 
   /* animation: color-animation 6s linear infinite; */
 
   --color-1: #fff;
   --color-2: #f4d35e;
-  --color-3: #FAF0CA;
+  --color-3: #faf0ca;
 
   @keyframes color-animation {
     0% {
@@ -135,9 +148,6 @@ export const ButtonWrapper = styled("div")`
   justify-content: center;
   max-width: 100%;
 
-  @media screen and (min-width: 1024px) {
-    /* max-width: 80%; */
-  }
 
   button:last-child {
     margin-left: 20px;
@@ -153,7 +163,33 @@ export const SubtitleWrapper = styled("div")`
   max-width: 740px;
   left: 50%;
   bottom: 5%;
+`;
 
+export const Icon = styled("a")`
+  margin-top: 50px;
+  fill: red;
+  display: block;
+  cursor: pointer;
+  animation: float 6s ease-in-out infinite;
+  /* z-index: -1; */
+  color: white;
+  font-size: 20px;
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+  @media only screen and (max-width: 1175px) {
+    display: block;
+ 
+  }
 `;
 
 export const Bg = styled("div")`
