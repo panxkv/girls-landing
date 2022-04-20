@@ -48,7 +48,7 @@ const Home = () => {
         content={CollectionContent.text}
         icon_height="100%"
         icon_width="100%"
-        icon="vid/vid1.mp4"
+        icon="vid/vid2.mp4"
         id="collection"
       />
 

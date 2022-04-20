@@ -209,8 +209,9 @@ const Wave = styled.div`
 `;
 
 export const Wave1 = styled(Wave)`
-  top: 260px;
+  top: 1700px;
   height: 446px;
+  z-index: 2;
   background-image: url(${wave});
 `;
 
@@ -229,13 +230,13 @@ export const Girls = styled(Wave)`
 `;
 
 export const Wave3 = styled(Wave)`
-  top: 585px;
+  top: 1800px;
   height: 446px;
   background-image: url(${wave2});
 `;
 
 export const Wave4 = styled(Wave)`
-  top: 605px;
+  top: 1020px;
   height: 446px;
   background-image: url(${wave3});
 `;

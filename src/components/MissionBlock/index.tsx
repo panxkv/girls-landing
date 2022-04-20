@@ -38,10 +38,12 @@ const MissionBlock = ({
           <Col>
             <ContentWrapper>
               <h1>{t(title)}</h1>
+              <SvgIcon src="girls.png" width="100%" height="100%" />
               <Content>{t(content)}</Content>
               {typeof second_content === "string" && (
                 <Content>{t(second_content)}</Content>
               )}
+
               <ServiceWrapper>
                 <Row justify="space-between">
                   {typeof section === "object" &&
