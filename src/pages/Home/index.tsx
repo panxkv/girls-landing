@@ -8,6 +8,7 @@ import TitleContent from "../../content/TitleContent.json";
 import RoadmapContent from "../../content/RoadmapContent.json";
 import TeamContent from "../../content/TeamContent.json";
 import FAQContent from "../../content/FAQContent.json";
+import ContactContent from "../../content/ContactContent.json";
 
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const FAQBlock = lazy(() => import("../../components/FAQBlock"));
@@ -18,6 +19,7 @@ const TitleBlock = lazy(() => import("../../components/TitleBlock"));
 const MissionBlock = lazy(() => import("../../components/MissionBlock"));
 const RoadmapBlock = lazy(() => import("../../components/RoadmapBlock"));
 const TeamBlock = lazy(() => import("../../components/TeamBlock"));
+const Contact = lazy(() => import("../../components/ContactForm"));
 
 const Home = () => {
   return (
@@ -80,11 +82,11 @@ const Home = () => {
         button={PartnershipContent.button}
         id="contact"
       />
-      {/* <Contact
+      <Contact
         title={ContactContent.title}
         content={ContactContent.text}
-        id="dupka"
-      /> */}
+        id="contact"
+      />
     </Container>
     </>
 
