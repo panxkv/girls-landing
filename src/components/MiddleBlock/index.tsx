@@ -21,7 +21,7 @@ const MiddleBlock = ({ id, title, content, button, t }: MiddleBlockProps) => {
             {content && <Content>{t(content)}</Content>}
             {button && (
               <Button onClick={() => {
-                window.location.href = "mailto:elo@elo.pl";
+                window.location.href = "mailto:info@girlsruntheworld.art";
             }}>
                 {t(button)}
               </Button>
