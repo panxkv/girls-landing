@@ -12,14 +12,14 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
     validate
   ) as any;
 
-  const ValidationType = ({ type }: ValidationTypeProps) => {
-    const ErrorMessage = errors[type];
-    return (
-      <Zoom direction="left">
-        <Span erros={errors[type]}>{ErrorMessage}</Span>
-      </Zoom>
-    );
-  };
+  // const ValidationType = ({ type }: ValidationTypeProps) => {
+  //   const ErrorMessage = errors[type];
+  //   return (
+  //     <Zoom direction="left">
+  //       <Span erros={errors[type]}>{ErrorMessage}</Span>
+  //     </Zoom>
+  //   );
+  // };
 
   return (
     <ContactContainer id={id}>
