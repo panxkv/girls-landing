@@ -24,7 +24,7 @@ const Contact = lazy(() => import("../../components/ContactForm"));
 const Home = () => {
   return (
     <>
-         <TitleBlock
+      <TitleBlock
         title={TitleContent.title}
         content={TitleContent.text}
         button={TitleContent.button}
@@ -33,61 +33,61 @@ const Home = () => {
         icon="world.svg"
         id="intro"
       />
-        <Container>
-      <ScrollToTop />
-      <MissionBlock
-        title={MissionContent.title}
-        content={MissionContent.text}
-        second_content={MissionContent.second_text}
-        icon_height="100%"
-        icon_width="100%"
-        icon="girl.svg"
-        id="mission"
-      />
-      <ContentBlock
-        type="right"
-        title={CollectionContent.title}
-        content={CollectionContent.text}
-        icon_height="100%"
-        icon_width="100%"
-        icon="vid/vid2.mp4"
-        id="collection"
-      />
+      <Container>
+        <ScrollToTop />
+        <MissionBlock
+          title={MissionContent.title}
+          content={MissionContent.text}
+          second_content={MissionContent.second_text}
+          icon_height="100%"
+          icon_width="100%"
+          icon="girl.svg"
+          id="mission"
+        />
+        <ContentBlock
+          type="right"
+          title={CollectionContent.title}
+          content={CollectionContent.text}
+          icon_height="100%"
+          icon_width="100%"
+          icon="vid/vid2.mp4"
+          id="collection"
+        />
 
-      <RoadmapBlock
-        title={RoadmapContent.title}
-        content={RoadmapContent.text}
-        roadmapItems={RoadmapContent.roadmapItems}
-        icon_height="100%"
-        icon_width="100%"
-        icon="girl.svg"
-        id="roadmap"
-      />
-      <TeamBlock
-        title={TeamContent.title}
-        section={TeamContent.section}
-        icon_height="100%"
-        icon_width="100%"
-        icon="girl.svg"
-        id="team"
-      />
-      <FAQBlock
-        title={FAQContent.title}
-        items={FAQContent.items}
-        id="faq"
-      />
+        <RoadmapBlock
+          title={RoadmapContent.title}
+          content={RoadmapContent.text}
+          roadmapItems={RoadmapContent.roadmapItems}
+          icon_height="100%"
+          icon_width="100%"
+          icon="girl.svg"
+          id="roadmap"
+        />
+        <TeamBlock
+          title={TeamContent.title}
+          section={TeamContent.section}
+          icon_height="100%"
+          icon_width="100%"
+          icon="girl.svg"
+          id="team"
+        />
+        <FAQBlock
+          title={FAQContent.title}
+          items={FAQContent.items}
+          id="faq"
+        />
         <MiddleBlock
-        title={PartnershipContent.title}
-        content={PartnershipContent.text}
-        button={PartnershipContent.button}
-        id="contact"
-      />
-      <Contact
-        title={ContactContent.title}
-        content={ContactContent.text}
-        id="contact"
-      />
-    </Container>
+          title={PartnershipContent.title}
+          content={PartnershipContent.text}
+          button={PartnershipContent.button}
+          id="contact"
+        />
+        <Contact
+          title={ContactContent.title}
+          content={ContactContent.text}
+          id="contact"
+        />
+      </Container>
     </>
 
   );

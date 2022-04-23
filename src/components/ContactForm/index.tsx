@@ -33,7 +33,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>
           <Slide direction="right">
-            <FormGroup autoComplete="off" name="contact" onSubmit={handleSubmit} data-netlify="true">
+            <FormGroup autoComplete="off" name="contact" onSubmit={handleSubmit} method="POST" data-netlify="true">
               {/* <Col span={24}>
                 <Input
                   type="text"
@@ -64,7 +64,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <ValidationType type="message" />
               </Col> */}
               <ButtonContainer>
-                <Button name="submit">{t("Submit")}</Button>
+                <Button type="submit" name="submit">{t("Submit")}</Button>
               </ButtonContainer>
             </FormGroup>
           </Slide>
