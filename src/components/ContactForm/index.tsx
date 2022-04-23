@@ -1,16 +1,14 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
-import { Slide, Zoom } from "react-awesome-reveal";
-import { ContactProps, ValidationTypeProps } from "./types";
-import { useForm } from "../../common/utils/useForm";
-import validate from "../../common/utils/validationRules";
+import { Slide } from "react-awesome-reveal";
+import { ContactProps } from "./types";
 import Block from "../Block";
-import { ContactContainer, Span } from "./styles";
+import { ContactContainer } from "./styles";
 
-const Contact = ({ title, content, id, t }: ContactProps) => {
-  const { errors } = useForm(
-    validate
-  ) as any;
+const Contact = ({ title, content, id }: ContactProps) => {
+  // const { errors } = useForm(
+  //   validate
+  // ) as any;
 
   // const ValidationType = ({ type }: ValidationTypeProps) => {
   //   const ErrorMessage = errors[type];
