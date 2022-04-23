@@ -33,8 +33,17 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>
           <Slide direction="right">
-            <FormGroup autoComplete="off" name="contact" onSubmit={handleSubmit} method="POST" data-netlify="true">
-              {/* <Col span={24}>
+            <form name="contact" method="POST" data-netlify="true">
+              <p>
+                <label>Your Email: <input type="email" name="email" /></label>
+              </p>
+              
+              <p>
+                <button type="submit">Send</button>
+              </p>
+            </form>
+            {/* <FormGroup autoComplete="off" name="contact" onSubmit={handleSubmit} method="POST " data-netlify="true"> */}
+            {/* <Col span={24}>
                 <Input
                   type="text"
                   name="name"
@@ -44,7 +53,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 />
                 <ValidationType type="name" />
               </Col> */}
-              <Col span={24}>
+            {/* <Col span={24}>
                 <Input
                   type="text"
                   name="email"
@@ -53,8 +62,8 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   onChange={handleChange}
                 />
                 <ValidationType type="email" />
-              </Col>
-              {/* <Col span={24}>
+              </Col> */}
+            {/* <Col span={24}>
                 <TextAreac
                   placeholder="Your Message"
                   value={values.message || ""}
@@ -63,10 +72,10 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 />
                 <ValidationType type="message" />
               </Col> */}
-              <ButtonContainer>
+            {/* <ButtonContainer>
                 <Button type="submit" name="submit">{t("Submit")}</Button>
               </ButtonContainer>
-            </FormGroup>
+            </FormGroup> */}
           </Slide>
         </Col>
       </Row>
