@@ -52,7 +52,7 @@ const RightBlock = ({
             </ContentWrapper>
           </Col>
           <Col lg={11} md={11} sm={12} xs={24}>
-            <video width={icon_width} height={icon_height} autoPlay muted loop playsinline>
+            <video width={icon_width} height={icon_height} autoPlay muted loop controls={false}>
               <source src={icon}  type="video/mp4" />
             </video>
           </Col>
