@@ -110,7 +110,7 @@ export const Tag = styled("div")`
   background-color: #0d3b66;
   color: white;
   @media screen and (max-width: 550px) {
-    width: 120px;
+    display: none;
   }
 `;
 
