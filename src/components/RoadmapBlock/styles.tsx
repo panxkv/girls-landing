@@ -106,7 +106,7 @@ export const Tag = styled("div")`
   margin: 5px;
   padding: 8px 8px;
   font-size: 12px;
-  width: 100px;
+  width: 170px;
   background-color: #0d3b66;
   color: white;
 `;
