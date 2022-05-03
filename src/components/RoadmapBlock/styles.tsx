@@ -109,6 +109,9 @@ export const Tag = styled("div")`
   width: 170px;
   background-color: #0d3b66;
   color: white;
+  @media screen and (max-width: 550px) {
+    width: 120px;
+  }
 `;
 
 export const ButtonWrapper = styled("div")`
